@@ -1,0 +1,17 @@
+<div style="text-align: center;">
+<h1 style="text-align: center;">WebSocket Demo</h1>
+
+<div >
+  <div class="input-group">
+    <input [(ngModel)]="label" type="text" placeholder="Enter user label" />
+    <button class="button" (click)="createUser(label)">Create</button>
+  </div>
+
+  <div *ngFor="let user of users" class="user-entry">
+    <div class="input-group">
+      <input [(ngModel)]="user.label" type="text" />
+      <button class="button-update" (click)="updateUser(user.label, user.id)">Update</button>
+    </div>
+  </div>
+</div>
+</div>
